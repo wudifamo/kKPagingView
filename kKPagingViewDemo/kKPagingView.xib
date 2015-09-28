@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="kKPagingView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-Vv-WNq">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="2Bw-cR-kmb"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTk-sh-7Zm">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                    <connections>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="bqG-5X-fAS"/>
+                    </connections>
+                </scrollView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.64999999999999969" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyr-hY-EYH">
+                    <rect key="frame" x="0.0" y="178" width="600" height="21"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Of4-et-szE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6Sv-Vv-WNq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5MW-Kl-aet"/>
+                <constraint firstItem="vyr-hY-EYH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AO3-A2-m8N"/>
+                <constraint firstAttribute="trailing" secondItem="6Sv-Vv-WNq" secondAttribute="trailing" id="Chx-Md-PK9"/>
+                <constraint firstAttribute="trailing" secondItem="vyr-hY-EYH" secondAttribute="trailing" id="Gav-XH-Gss"/>
+                <constraint firstAttribute="bottom" secondItem="dTk-sh-7Zm" secondAttribute="bottom" id="Sro-XC-YEn"/>
+                <constraint firstAttribute="bottom" secondItem="vyr-hY-EYH" secondAttribute="bottom" id="WfM-Dg-eDH"/>
+                <constraint firstItem="dTk-sh-7Zm" firstAttribute="top" secondItem="6Sv-Vv-WNq" secondAttribute="bottom" id="fB6-vG-IBv"/>
+                <constraint firstItem="6Sv-Vv-WNq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mI9-KD-kf6"/>
+                <constraint firstItem="dTk-sh-7Zm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="un9-Uw-lEv"/>
+                <constraint firstAttribute="trailing" secondItem="dTk-sh-7Zm" secondAttribute="trailing" id="ygu-fg-BCe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="vyr-hY-EYH"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="myHV" destination="6Sv-Vv-WNq" id="TgT-aM-H0h"/>
+                <outlet property="scv" destination="dTk-sh-7Zm" id="zfd-7F-yCZ"/>
+                <outlet property="titleLabel" destination="vyr-hY-EYH" id="jFp-FD-W2y"/>
+            </connections>
+            <point key="canvasLocation" x="659" y="515.5"/>
+        </view>
+    </objects>
+</document>
