@@ -1,5 +1,5 @@
 # kKPagingView
-ios8.0+ iphone ipad均可<br/>
+ios8.0+ iphone ipad均可,适用屏幕旋转自动布局，保持图片比例与约束。<br/>
 使用方法<br/>
 storyboard拖拽一个uiview，并添加约束(固定高度或固定比例均可)<br/>
 import "kKPagingView"; <br/>
